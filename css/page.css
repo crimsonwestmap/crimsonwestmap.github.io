@@ -2,42 +2,51 @@
 	position:absolute;
 	top:0px;
 	left:0px;
-	right:0px;
-	height:75px;
-	background-image:url('../img/pics/Banner.jpg');
-	border-bottom:1px solid #ccc;
+	height:153px;
+	width:1520px;
+	border-bottom:3px solid #900;
+	border-right:3px solid #900;
+	z-index:1;
 }
 
-#link{
-	background-image:url('../img/pics/Title.png');
-	background-position:0px 0px;
+#logo{
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:150px;
+	width:300px;
+	background-image:url('../img/pics/Logo.jpg');
 	background-repeat:no-repeat;
-	width:800px;
-	margin-top:0px;
-	margin-left:100px;
-	height:79px;
-	font-size:0px;
+	z-index:2;
 }
 
-#link:hover{
-	background-position:0px -79px;
+#banner{
+	position:absolute;
+	top:0px;
+	left:299px;
+	height:150px;
+	width:1217px;
+	background-image:url('../img/pics/Banner.jpg');
+	background-repeat:no-repeat;
+	z-index:2;
 }
 
 #toolbar{
 	position:absolute;
-	top:75px;
+	top:153px;
 	bottom:0px;
 	left:0px;
-	width:175px;
+	width:150px;
 	background-color:#666;
 	padding:10px;
+	border-right:3px solid #900;
 }
 
 #map{
 	position:absolute;
-	top:75px;
+	top:0px;
 	bottom:0px;
-	left:175px;
+	left:149px;
 	right:0px;
 }
 
