@@ -2,7 +2,8 @@
         L.tileLayer('img/map/{z}/{y}-{x}.jpeg', {
             minZoom: 0,
             maxZoom: 4,
-            attribution: 'LOTRRP Map by /u/astosman',
+            tileSize: 259,
+            attribution: 'Crimson West Map by /u/astosman',
             tms: false,
 			noWrap: true,
 			maxBoundsViscosity: 1.0
@@ -29,37 +30,7 @@
 		*/
 
 		//loop through Polygons and display
-		GondorPoly.bindPopup("<b>Gondor</b>")
-		RohanPoly.bindPopup("<b>Rohan</b>")
-		MordorPoly.bindPopup("<b>Mordor</b>")
-		DolGuldurPoly.bindPopup("<b>Dol Guldur</b>")
-		NorthernMistyMountainsPoly.bindPopup("<b>Northern Misty Mountains</b>")
-		NorthernBlueMountainsPoly.bindPopup("<b>Northern Blue Mountains</b>")
-		SouthernBlueMountainsPoly.bindPopup("<b>Southern Blue Mountains</b>")
-		IronHillsPoly.bindPopup("<b>The Iron Hills</b>")
-		MoriaPoly.bindPopup("<b>Moria</b>")
-		UmbarPoly.bindPopup("<b>Umbar</b>")
-		HarondorPoly.bindPopup("<b>Harondor</b>")
-		HaradwaithPoly.bindPopup("<b>Haradwaith</b>")
-		LurmsakunPoly.bindPopup("<b>Lûrmsakun</b>")
-		DunlandPoly.bindPopup("<b>Dunland</b>")
-		DorwinionPoly.bindPopup("<b>Dorwinion</b>")
-		BreelandPoly.bindPopup("<b>Breeland</b>")
-		AnglePoly.bindPopup("<b>The Angle</b>")
-		ShirePoly.bindPopup("<b>The Shire</b>")
-		LothlorienPoly.bindPopup("<b>Lothlórien</b>")
-		DalePoly.bindPopup("<b>Dale</b>")
-		LindonPoly.bindPopup("<b>Lindon</b>")
-		WoodlandRealmPoly.bindPopup("<b>Woodland Realm</b>")
-
-
-		var PolyLayer = L.layerGroup([
-			GondorPoly, RohanPoly, MordorPoly, DolGuldurPoly, NorthernMistyMountainsPoly,
-			NorthernBlueMountainsPoly, SouthernBlueMountainsPoly, IronHillsPoly, 
-			MoriaPoly, UmbarPoly, HarondorPoly,HaradwaithPoly, LurmsakunPoly, DunlandPoly, 
-			DorwinionPoly, BreelandPoly, AnglePoly, ShirePoly,
-			LothlorienPoly, DalePoly, LindonPoly, WoodlandRealmPoly
-			]).addTo(map);
+	
 
 		//Loop through the Gondor markers (declared on marker.js) array and add markers to layer
 		var arrGondorMarkers = []
