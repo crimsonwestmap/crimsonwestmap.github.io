@@ -1,9 +1,10 @@
 #header{
-	position:absolute;
+	position:relative;
 	top:0px;
 	left:0px;
 	height:153px;
-	width:1520px;
+	width:100%;
+	max-width:1520px;
 	border-bottom:3px solid #900;
 	border-right:3px solid #900;
 	z-index:1;
@@ -21,11 +22,12 @@
 }
 
 #banner{
-	position:absolute;
+	position:fixed;
 	top:0px;
 	left:299px;
 	height:150px;
-	width:1217px;
+	max-width:1217px;
+	width:100%;
 	background-image:url('../img/pics/Banner.jpg');
 	background-repeat:no-repeat;
 	z-index:2;
