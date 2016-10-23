@@ -11,7 +11,7 @@
 		  
 		/*This function gives you Lat Long of what you click on */
 		
-		/*function onMapClick(e) {
+		function onMapClick(e) {
 			alert("You clicked the map at " + e.latlng);
 
 			/*if(confirm("ADD MARKER HERE=?")){
@@ -25,37 +25,37 @@
 	
 			}*/
 
-		/*};
+		};
 		map.on('click', onMapClick);
-		*/
+		
 
 		//loop through Polygons and display
 	
 
 		//Loop through the Gondor markers (declared on marker.js) array and add markers to layer
-		var arrGondorMarkers = []
-         for (var i=0; i<markers_Gondor.length; i++) {
+		var arrMarkers = []
+         for (var i=0; i<markers_Array.length; i++) {
            
-            var lat = markers_Gondor[i][0];
-            var lon = markers_Gondor[i][1];
-			var icn = markers_Gondor[i][2];
-            var popupText = markers_Gondor[i][3];
+            var lat = markers_Array[i][0];
+            var lon = markers_Array[i][1];
+			var icn = markers_Array[i][2];
+            var popupText = markers_Array[i][3];
             
             var marker = new L.Marker([lat, lon], {icon: icn}).bindPopup(popupText);
-			arrGondorMarkers.push(marker)
+			arrMarkers.push(marker)
          }
-		var markerLayerGondor = L.layerGroup(arrGondorMarkers).addTo(map);
+		var markerLayer = L.layerGroup(arrMarkers).addTo(map);
 		
 		// Hide markers if the user zooms out
 		map.on('zoomend', function () {
 			if (map.getZoom() < 2) {
-				map.removeLayer(markerLayerGondor);
+				map.removeLayer(markerLayer);
 					
 
 			}
 			else
 			{
-				map.addLayer(markerLayerGondor);
+				map.addLayer(markerLayer);
 				
 								
 			}   
@@ -63,13 +63,13 @@
 		}); 
 		
 		
-		function toggleGondorLayer(){
-			if (map.hasLayer(markerLayerGondor)) {
-				map.removeLayer(markerLayerGondor);
+		function toggleMarkerLayer(){
+			if (map.hasLayer(markerLayer)) {
+				map.removeLayer(markerLayer);
 			}
 			else
 			{
-				map.addLayer(markerLayerGondor);
+				map.addLayer(markerLayer);
 			}
 		}
 		
