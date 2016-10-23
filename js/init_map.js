@@ -48,7 +48,7 @@
 		
 		// Hide markers if the user zooms out
 		map.on('zoomend', function () {
-			if (map.getZoom() < 2) {
+			if (map.getZoom() < 1) {
 				map.removeLayer(markerLayer);
 					
 
